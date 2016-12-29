@@ -1,0 +1,107 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/huangzenghui/todos.git",
+    "type": "git"
+  },
+  "author": "huangzenghui <1296727154@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "supervisor -w build ./build/app.js",
+    "service": "mocha ./test/service/service.js",
+    "tests": "better-npm-run tests",
+    "webpackdev": "better-npm-run webpack:dev",
+    "webpackprod": "better-npm-run webpack:prod",
+    "gulpdev": "better-npm-run gulp:dev",
+    "gulpprod": "better-npm-run gulp:prod",
+    "builddev": "npm run gulpdev & npm run webpackdev",
+    "buildprod": "npm run gulpprod & npm run webpackprod"
+  },
+  "betterScripts": {
+    "tests": {
+      "command": "npm run service",
+      "env": {
+        "NODE_ENV": "tests"
+      }
+    },
+    "webpack:dev": {
+      "command": "webpack --progress --color",
+      "env": {
+        "NODE_ENV": "dev"
+      }
+    },
+    "webpack:prod": {
+      "command": "webpack --progress --color",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "gulp:dev": {
+      "command": "gulp",
+      "env": {
+        "NODE_ENV": "dev"
+      }
+    },
+    "gulp:prod": {
+      "command": "gulp",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  },
+  "dependencies": {
+    "autoprefixer": "^6.6.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "better-npm-run": "^0.0.13",
+    "classnames": "^2.2.5",
+    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "graphql": "^0.8.2",
+    "graphql-server-koa": "^0.4.3",
+    "graphql-tools": "^0.8.4",
+    "html-webpack-plugin": "^2.24.1",
+    "keymirror": "^0.1.1",
+    "koa": "2",
+    "koa-bodyparser": "next",
+    "koa-convert": "^1.2.0",
+    "koa-history-api-fallback": "^0.1.3",
+    "koa-logger": "next",
+    "koa-mongo": "^1.1.0",
+    "koa-router": "next",
+    "koa-static": "^2.0.0",
+    "koa-views": "next",
+    "lokka": "^1.7.0",
+    "lokka-transport-http": "^1.6.1",
+    "postcss-loader": "^1.2.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-redux": "^5.0.1",
+    "react-router": "^3.0.0",
+    "react-router-redux": "^4.0.7",
+    "redux": "^3.6.0",
+    "redux-async-await": "^1.0.1",
+    "redux-create-reducer-curry": "^1.0.0",
+    "redux-logger": "^2.7.4",
+    "redux-thunk": "^2.1.0",
+    "seamless-immutable": "^7.0.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.21.0",
+    "babel-loader": "^6.2.10",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-3": "^6.17.0",
+    "chai": "^3.5.0",
+    "css-loader": "^0.26.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-watch": "^4.3.11",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "supertest": "^2.0.1",
+    "webpack": "2.2.0-rc.2"
+  }
+}
