@@ -8,7 +8,7 @@ const baseConfig = {
     app: config.srcDir + '/app.js',
   },
   _output: {
-    filename: 'scripts/[name].js',
+    filename: 'scripts/[name].[chunkhash:5].js',
     path: config.buildDir + '/assert/',
   },
   _module: {
@@ -43,7 +43,7 @@ const baseConfig = {
   },
   _devtool: 'source-map',
   _plugins: [
-    new ExtractTextPlugin({ filename: 'styles/[name].css', disable: false, allChunks: true }),
+    new ExtractTextPlugin({ filename: 'styles/[name].[chunkhash:5].css', disable: false, allChunks: true }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
     })
