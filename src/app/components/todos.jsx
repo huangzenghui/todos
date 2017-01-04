@@ -1,4 +1,5 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import './todos.less';
 import Todo from './todo.jsx';
@@ -8,6 +9,7 @@ class Todos extends React.Component {
 
   constructor(props){
     super(props);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
   changeAllState(completed){

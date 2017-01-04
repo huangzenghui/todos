@@ -7,7 +7,7 @@ const webpackProd = {
   entry: webpackBase._entry,
   output: webpackBase._output,
   module: webpackBase._module,
-  devtool: webpackBase._devtool,
+  devtool: false,
   plugins: [
     ...webpackBase._plugins,
     new HtmlWebpackPlugin({

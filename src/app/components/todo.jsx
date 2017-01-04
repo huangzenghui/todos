@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import TodoActions from '../actions/todos';
 import classnames from 'classnames';
@@ -15,6 +16,7 @@ class Todo extends React.Component {
     this.editTodoHandle = this.editTodoHandle.bind(this);
     this.remove = this.remove.bind(this);
     this.changeEditing = this.changeEditing.bind(this);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
   componentDidUpdate(){

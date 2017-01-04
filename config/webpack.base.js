@@ -6,6 +6,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const baseConfig = {
   _entry: {
     app: config.srcDir + '/app.js',
+    react: ['react', 'react-dom', 'redux', 'react-redux', 'react-router', 'react-router-redux', 
+      'redux-async-await', 'redux-create-reducer-curry', 'redux-thunk', 'seamless-immutable']
   },
   _output: {
     filename: 'scripts/[name].[chunkhash:5].js',

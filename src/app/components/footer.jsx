@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import './footer.less';
 import TodoActions from '../actions/todos';
 
@@ -8,6 +9,7 @@ class Footer extends React.Component {
   constructor(props){
     super(props);
     this.clearCompleted = this.clearCompleted.bind(this);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
   switchStatus(status, e){

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom";
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import './header.less';
 import TodoActions from '../actions/todos';
@@ -9,6 +10,7 @@ class Header extends React.Component {
   constructor(props){
     super(props);
     this.submitHandle = this.submitHandle.bind(this);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
   submitHandle(e){

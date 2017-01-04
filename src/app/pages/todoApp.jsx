@@ -1,4 +1,5 @@
 import React from 'react';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import '../styles/common.less';
 import './todoApp.less';
@@ -8,6 +9,11 @@ import Todos from '../components/todos.jsx';
 import TodosActions from '../actions/todos';
 
 class TodoApp extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
+  }
 
   componentDidMount(){
     this.props.getTodos();
