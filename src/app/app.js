@@ -14,8 +14,11 @@ import './styles/common.less';
 const middlewares = [
   asyncAwait,
   thunk,
-  logger(),
 ];
+
+if(process.env.NODE_ENV !== 'production'){
+  middlewares.push(logger())
+}
 
 const store = applyMiddleware(...middlewares)(createStore)(combineReducers({
   ...reducers,
