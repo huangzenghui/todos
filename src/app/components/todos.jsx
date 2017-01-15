@@ -1,7 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
-import './todos.less';
+import './todos.css';
 import Todo from './todo.jsx';
 import TodoActions from '../actions/todos';
 

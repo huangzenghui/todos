@@ -9,7 +9,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { syncHistoryWithStore, routerReducer } from 'react-router-redux';
 import routes from './routes';
 import reducers from './reducers';
-import './styles/common.less';
+import './styles/common.css';
 
 const middlewares = [
   asyncAwait,

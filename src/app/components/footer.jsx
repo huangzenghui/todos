@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
-import './footer.less';
+import './footer.css';
 import TodoActions from '../actions/todos';
 
 class Footer extends React.Component {

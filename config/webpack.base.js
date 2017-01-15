@@ -10,7 +10,7 @@ const baseConfig = {
       'redux-async-await', 'redux-create-reducer-curry', 'redux-thunk', 'seamless-immutable']
   },
   _output: {
-    filename: 'scripts/[name].[chunkhash:5].js',
+    filename: 'scripts/[name].js',
     path: config.buildDir + '/assert/',
   },
   _module: {
@@ -28,7 +28,7 @@ const baseConfig = {
         plugins: ['transform-runtime']
       }
     }, {
-      test: /\.less$/,
+      test: /\.css$/,
       include: [
         path.resolve(config.srcDir),
       ],
@@ -38,14 +38,13 @@ const baseConfig = {
       loaders: [
         'style-loader',
         ExtractTextPlugin.extract({ loader: 'css-loader?sourceMap', options: { importLoaders: 1 } }),
-        'less-loader',
         'postcss-loader',
       ],
     }],
   },
   _devtool: 'source-map',
   _plugins: [
-    new ExtractTextPlugin({ filename: 'styles/[name].[chunkhash:5].css', disable: false, allChunks: true }),
+    new ExtractTextPlugin({ filename: 'styles/[name].css', disable: false, allChunks: true }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'commons',
     })

@@ -1,8 +1,7 @@
 import React from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
-import '../styles/common.less';
-import './todoApp.less';
+import './todoApp.css';
 import Header from '../components/header.jsx';
 import Footer from '../components/footer.jsx';
 import Todos from '../components/todos.jsx';

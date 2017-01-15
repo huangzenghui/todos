@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
-import './header.less';
+import './header.css';
 import TodoActions from '../actions/todos';
 
 class Header extends React.Component {
