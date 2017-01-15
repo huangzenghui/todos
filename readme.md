@@ -49,7 +49,7 @@ todos           # 项目根目录
 ```
 
 ## cssnext
-该用cssnext需要postcss-loader来编译，用到cssnext的那些功能，就需要按照对应的postcss插件，比如：
+改用cssnext需要postcss-loader来编译，用到cssnext的那些功能，就需要按照对应的postcss插件，比如：
 ```
 :root {
   --firthColor: #f5f5f5;
